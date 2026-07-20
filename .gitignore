@@ -1,0 +1,7 @@
+# Compiled files
+server
+client
+*.o
+
+# VS Code settings
+.vscode/
