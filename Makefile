@@ -1,7 +1,9 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -Wextra
 
-all: server client
+TARGETS = server client
+
+all: $(TARGETS)
 
 server: server.c
 	$(CC) $(CFLAGS) server.c -o server
@@ -10,4 +12,10 @@ client: client.c
 	$(CC) $(CFLAGS) client.c -o client
 
 clean:
-	rm -f server client
+	rm -f $(TARGETS)
+
+run-server:
+	./server
+
+run-client:
+	./client
